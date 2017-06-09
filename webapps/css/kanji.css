@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "AntiqueMaru";
+    src: url("../fonts/antique_maru.ttf");
+}
+
+* {
+	font-family: cursive, verdana, arial;
+}
+
+body {
+	background-color: whitesmoke;
+	margin: 0px;
+}
+
+#overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	overflow: hidden;
+	z-index: 101;
+	background-color: rgba(120,120,120,0.9);
+	background-image: url("../imgs/loading.gif");
+	background-size: 110px 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#loading {
+	display: block;
+	line-height: 100vh;
+	text-align: center;
+	margin-top: -65px;
+	font-size: 24px;
+}
+
+#content {
+	position: relative;
+	z-index: 100;
+    margin: 100px auto 0px auto;
+    width: 600px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 2px 2px 6px #888;
+	padding: 10px;
+	background-color: white;
+}
+
+#score {
+	display: none;
+	border-bottom: 1px solid black;
+}
+
+#score > div {
+	display: inline-block;
+	width: 50%;
+}
+
+#score > div > label {
+	font-weight: bold;
+}
+
+#correct {
+	text-align: left;
+	color: blue;
+}
+
+#pass {
+	text-align: right;
+	color: red;
+}
+
+#reading {
+	width: 600px;
+	height: 80px;
+	line-height: 80px;
+	font-family: AntiqueMaru;
+	font-size: 60px;
+}
+
+#middle {
+	position: relative;
+	width: 598px;
+	height: 238px;
+	line-height: 238px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border: 1px solid black;
+}
+
+#kanji {
+	font-family: AntiqueMaru;
+	font-size: 160px;
+}
+
+#level {
+	position: absolute;
+	right: 0px;
+	text-align: right;
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+#bottom {
+	width: 600px;
+	height: 80px;
+	line-height: 40px;
+}
+
+#meaning {
+	font-variant: small-caps;
+	font-size: 24px;
+	text-transform: capitalize;
+}
+
+#meaningOptions {
+  font-size: 12px;
+}
+
+#answer {
+	position: relative;
+	display: none;
+	border-top: 1px solid black;
+	padding-top: 10px;
+}
+
+#inputAnswer {
+	width: 140px;
+}
+
+#msgAnswer {
+	position: absolute;
+	right: 0px;
+	opacity: 0;
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#msgAnswer::selection {
+	color: red;
+	background: transparent;
+}
+
+button {
+	box-shadow: inset 0px 1px 0px 0px #fff;
+	background-color: #eee;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #777;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 18px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+button:hover {
+	background-color: whitesmoke;
+}
+
+button:active {
+	position: relative;
+	top: 1px;
+}
